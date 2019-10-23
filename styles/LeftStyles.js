@@ -5,14 +5,18 @@ var styles = StyleSheet.create({
     flex:1,
     justifyContent:"center",
     alignContent:"center",
-    backgroundColor:"#ffcc99",
+    backgroundColor:"#ffcc99"
   },
   MainContainer:{
     flex:1,
     justifyContent:'center',
     alignContent:'center',
     width:null,
-    height:null,
+    resizeMode:'cover'
+  },
+  but:{
+    backgroundColor:'transparent',
+    color:'#1F72DD'
   }
 });
 
