@@ -9,7 +9,7 @@ const Toast = () => {
     const [flexPos, setFlexPos] = React.useState(false);
     var flexPosition = null;
     var text = "Toast";
-    if (flexPos === "false"){
+    if (flexPos === false){
         flexPosition = "flex-end";
         text = "You've moved the toast down";
     } else {
