@@ -4,34 +4,31 @@ import styles from '../styles/ToastStyles';
 
 
 
-const toast = () => {
+const Toast = () => {
 
-    const [bt, setBut] = useState(1)
-    
-    var moveToast = null;
-    
-    if(bt ==1 ){
-        moveToast = styles.moveDown
+    const [flexPos, setFlexPos] = React.useState(false);
+    var flexPosition = null;
+    var text = "Toast";
+    if (flexPos === "false"){
+        flexPosition = "flex-end";
+        text = "You've moved the toast down";
+    } else {
+        flexPosition = "flex-start";
+        text = "you've move the toast up";
     }
-    if(bt ==2){
-        moveToast = styles.moveUp
-    }
-    
+
     return (
-        <View style={styles.container}>
+        <View style={[styles.bg, { justifyContent: flexPosition}]}>
           <TouchableOpacity
-            style={moveToast}
-            onValueChange={(value) => {setBut(value)}}
-            selectedValue={bt}
-          >
-            <Text style={styles.Text}> Toast </Text>
+            style={styles.toastButton}
+            onPress={() => 
+            setFlexPos(!flexPos)
+            }>
+            <Text>{text}</Text>
           </TouchableOpacity>
          </View>
-       )
-    
+       );
     };
-  
+    
 
-
-
-export default toast;
+export default Toast;

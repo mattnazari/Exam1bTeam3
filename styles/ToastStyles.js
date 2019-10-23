@@ -1,37 +1,20 @@
 import {StyleSheet} from 'react-native';
 
 var styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems:'center',
-        paddingHorizontal: 10,
-        backgroundColor:'#eed'
+    bg:{
+        position:'absolute',
+        width: "100%",
+        height: "100%",
+        top: 0,
+        left: 0,
+        alignItems:'center'
       },
-      moveDown: {
-        alignItems: 'center',
-        backgroundColor: 'yellow',
-        width:150,
-        padding: 25,
-        borderRadius:10,
-        borderColor:'#fcf003',
-        borderWidth:4,
-        position:"absolute",
-        bottom:50
-      },
-      moveUp: {
-        alignItems: 'center',
-        backgroundColor: 'yellow',
-        width:150,
-        padding: 25,
-        borderRadius:10,
-        borderColor:'#fcf003',
-        borderWidth:4,
-        position:"absolute",
-        top:50
-      },
-      Text: {
-            fontSize:15
+    toastButton:{
+        backgroundColor:'yellow',
+        padding:30,
+        margin:20
       }
+      
     
 });
 
