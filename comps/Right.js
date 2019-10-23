@@ -8,9 +8,10 @@ function Right(){
     const [wideSwitch, setWideSwitch] = useState(false);
     const [widerSwitch, setWiderSwitch] = useState(false);
     const [widestSwitch, setWidestSwitch] = useState(false);
+    const [flexGrowth, setFlexGrowth] = useState(1);
 
 return (
-    <View style={[styles.container]}>
+    <View style={[styles.container, {flex:flexGrowth}]}>
         <View>
             <Text>Normal</Text>
             <Switch
@@ -20,6 +21,7 @@ return (
                     setWideSwitch(false);
                     setWiderSwitch(false);
                     setWidestSwitch(false);
+                    setFlexGrowth(1);
                 }}
             />
         </View>
@@ -33,6 +35,7 @@ return (
                     setWideSwitch(true);
                     setWiderSwitch(false);
                     setWidestSwitch(false);
+                    setFlexGrowth(2);
                 }}
             />
         </View>
@@ -46,6 +49,7 @@ return (
                     setWideSwitch(false);
                     setWiderSwitch(true);
                     setWidestSwitch(false);
+                    setFlexGrowth(3);
                 }}
             />
         </View>
@@ -59,6 +63,7 @@ return (
                     setWideSwitch(false);
                     setWiderSwitch(false);
                     setWidestSwitch(true);
+                    setFlexGrowth(4);
                 }}
             />
         </View>
