@@ -1,25 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import styles from '../styles/ToastStyles';
+
 
 
 const toast = () => {
 
     const [bt, setBut] = useState(1)
     
-    var moveBut = null;
+    var moveToast = null;
     
     if(bt ==1 ){
-        move = styles.moveUp
+        moveToast = styles.moveDown
     }
     if(bt ==2){
-        moveToast = styles.moveDown
+        moveToast = styles.moveUp
     }
     
     return (
         <View style={styles.container}>
           <TouchableOpacity
-            style={styles.button}
+            style={moveToast}
             onValueChange={(value) => {setBut(value)}}
             selectedValue={bt}
           >
